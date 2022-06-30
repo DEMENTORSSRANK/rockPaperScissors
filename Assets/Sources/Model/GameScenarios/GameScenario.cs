@@ -29,9 +29,9 @@ namespace Sources.Model.GameScenarios
 
         public event Action StartChoosing;
         
-        public event Action<FistType> PlayerChosen;
+        public event Action<FistType> PlayerPlayed;
 
-        public event Action<FistType> EnemyChosen;
+        public event Action<FistType> EnemyPlayed;
 
         public event Action<ResultType> Moved;
 
@@ -64,11 +64,11 @@ namespace Sources.Model.GameScenarios
                 
                 FistType playerChoose = await _player.MakeChoiceAsync();
                 
-                PlayerChosen?.Invoke(playerChoose);
+                PlayerPlayed?.Invoke(playerChoose);
 
                 FistType enemyChoose = await _enemy.MakeChoiceAsync();
                 
-                EnemyChosen?.Invoke(enemyChoose);
+                EnemyPlayed?.Invoke(enemyChoose);
 
                 ResultType result = _comparator.Compare(playerChoose, enemyChoose);
                 

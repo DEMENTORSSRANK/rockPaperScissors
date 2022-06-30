@@ -51,11 +51,11 @@ namespace Sources.CompositeRoot
 
             _input.Played += _player.PlayWithFist;
 
-            _scenario.PlayerChosen += _playerScreen.OnPlayerPlayed;
+            _scenario.PlayerPlayed += _playerScreen.OnPlayerPlayed;
 
-            _scenario.PlayerChosen += _fistView.OnPlayerChosen;
+            _scenario.PlayerPlayed += _fistView.OnPlayerPlayed;
 
-            _scenario.EnemyChosen += _fistView.OnEnemyChosen;
+            _scenario.EnemyPlayed += _fistView.OnEnemyPlayed;
 
             _scenario.AnyWon += _endScreen.OnAnyWon;
 
@@ -83,11 +83,11 @@ namespace Sources.CompositeRoot
 
             _input.Played -= _player.PlayWithFist;
 
-            _scenario.PlayerChosen -= _playerScreen.OnPlayerPlayed;
+            _scenario.PlayerPlayed -= _playerScreen.OnPlayerPlayed;
 
-            _scenario.PlayerChosen -= _fistView.OnPlayerChosen;
+            _scenario.PlayerPlayed -= _fistView.OnPlayerPlayed;
 
-            _scenario.EnemyChosen -= _fistView.OnEnemyChosen;
+            _scenario.EnemyPlayed -= _fistView.OnEnemyPlayed;
 
             _scenario.AnyWon -= _endScreen.OnAnyWon;
 

@@ -17,9 +17,9 @@ namespace Sources.View.Fists
 
         private Sprite _resetSprite;
 
-        public void OnPlayerChosen(FistType fist) => ApplyRendererToChooseFist(_player, fist);
+        public void OnPlayerPlayed(FistType fist) => ApplyRendererToChooseFist(_player, fist);
 
-        public void OnEnemyChosen(FistType fist) => ApplyRendererToChooseFist(_enemy, fist);
+        public void OnEnemyPlayed(FistType fist) => ApplyRendererToChooseFist(_enemy, fist);
 
         public void OnMoved(ResultType result)
         {
